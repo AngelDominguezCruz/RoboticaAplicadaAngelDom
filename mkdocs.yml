@@ -1,4 +1,10 @@
 site_name: Plantilla para Documentación
+nav:
+  - Inicio: index.md
+  - Comandos: comandos.md
+  - Ejemplo: ejemplo.md
+  - Git Bash / Git: gitcmds.md
+  - Homework 1: examplesofrobots.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
