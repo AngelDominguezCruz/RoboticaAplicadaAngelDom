@@ -23,7 +23,7 @@
 
 - **Catesian Robot:** These robots operate on three axes (X, Y and Z) at 90 degree angles to each other. This structure allows the to cover a rectangular or cubical workspace. An example could be the TPA-E Series Gantry Robot from MAcron Dynamics. These robots are used for automated material handling (carrying heavy things) or assembling large components.
 
-![Jointed-Arm robot](recursos/imgsT/PAE_Series.jfif)
+![Jointed-Arm robot](recursos/imgs/PAE_Series.jfif)
 
 - **Cylindrical Robot:** These robots have a rotary base, a vertical linear axis and a horizontal linear axis. These robots create a cylindrical workspace. A real life example is the Seiko D-TRAN RT3300. These type of robots are less common today, but they are used for simple pick and place operations, machine tending and assembly tasks.
 
