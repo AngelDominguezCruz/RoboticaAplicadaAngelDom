@@ -15,16 +15,16 @@
 
 ## 2) Objetivos
 
-- **General:** _Qué se pretende lograr en términos amplios._
-- **Específicos:**
-  - _OE1…_
-  - _OE2…_
-  - _OE3…_
+- **General:** Analyze and compare different industrial robot morphologies by examining thir kinematic structures, degrees of freedom and resulting workspaces.
 
-## 3) Alcance y Exclusiones
+---
 
-- **Incluye:** _Qué funcionalidades/entregables sí están en el proyecto._
-- **No incluye:** _Qué queda fuera para evitar malentendidos._
+## 3) Robots By Morphologies
+
+- **Catesian Robot:** These robots operate on three axes (X, Y and Z) at 90 degree angles to each other. This structure allows the to cover a rectangular or cubical workspace. An example could be the TPA-E Series Gantry Robot from MAcron Dynamics. These robots are used for automated material handling (carrying heavy things) or assembling large components.
+- **Cylindrical Robot:** These robots have a rotary base, a vertical linear axis and a horizontal linear axis. These robots create a cylindrical workspace. A real life example is the Motoman L3. These type of robots are less common today, but they are used for simple pick and place operations, machine tending and assembly tasks.
+- **Polar Robot:** These robots have a rotary base, a rotary shoulder joint and a linear axis to extend and retract the arm. The workspace of these robots is a sphere. The Unimate (the first industrial robot) is the most famous example and it was used by General Motors in the 1960s for spot welding and die-casting.
+- **Jointed-Arm Robot:** These robots have a rotary base, a vertical linear axis and a horizontal linear axis. These robots create a cylindrical workspace. A real life example is the Motoman L3. These type of robots are less common today, but they are used for simple pick and place operations, machine tending and assembly tasks.
 
 ---
 
