@@ -23,7 +23,7 @@
 
 - **Catesian Robot:** These robots operate on three axes (X, Y and Z) at 90 degree angles to each other. This structure allows the to cover a rectangular or cubical workspace. An example could be the TPA-E Series Gantry Robot from MAcron Dynamics. These robots are used for automated material handling (carrying heavy things) or assembling large components.
 
-![Jointed-Arm robot](recursos/imgs/PAE_Series.jfif)
+![Jointed-Arm robot](recursos/imgs/TPAE_Series.jfif)
 
 - **Cylindrical Robot:** These robots have a rotary base, a vertical linear axis and a horizontal linear axis. These robots create a cylindrical workspace. A real life example is the Seiko D-TRAN RT3300. These type of robots are less common today, but they are used for simple pick and place operations, machine tending and assembly tasks.
 
@@ -42,43 +42,3 @@
 ![SCARA robot](recursos/imgs/EpsonSCARA.jpg)
 
 ---
-
-## 4) Requisitos
-
-**Software**
-- _SO compatible (Windows/Linux/macOS)_
-- _Python 3.x / Node 18+ / Arduino IDE / etc._
-- _Dependencias (p. ej., pip/requirements, npm packages)_
-
-**Hardware (si aplica)**
-- _MCU / Sensores / Actuadores / Fuente de poder_
-- _Herramientas (multímetro, cautín, etc.)_
-
-**Conocimientos previos**
-- _Programación básica en X_
-- _Electrónica básica_
-- _Git/GitHub_
-
----
-
-## 5) Instalación
-
-```bash
-# 1) Clonar
-git clone https://github.com/<usuario>/<repo>.git
-cd <repo>
-
-# 2) (Opcional) Crear entorno virtual
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
-
-# 3) Instalar dependencias (ejemplos)
-pip install -r requirements.txt
-# o, si es Node:
-npm install
-
-
-```
