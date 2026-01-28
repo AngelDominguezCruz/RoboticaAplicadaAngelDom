@@ -55,4 +55,10 @@
   <img src="https://mediaserver.goepson.com/ImConvServlet/imconv/0360624deb4af85734c282ffd9403b0d61059343/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=g3_000_690x460" width="500">
 </p>
 
+- **DELTA Robot:** Is a type of parallel robot, recognized by its three arms connected to a single base above the workspace. This design, often using lightweight carbon fiber materials, allows for extremely fast and precise movements within a dome-shaped workspace. The ABB IRB 360 FlexPicker is the most famous Delta robot in the world. It is a leader in speed picking and packing technology. Its incredible speed and acceleration make it perfect for tasks like sorting candies, packaging medical devices, and assembling small electronic parts directly on a conveyor belt.
+
+<p align="center">
+  <img src="https://cdn.kyklo.co/assets/W1siZiIsIjIwMjQvMTAvMzEvMTQvMDAvMzYvZGZiYzNkODktN2RiNy00MjZjLTgyNzEtMzU5MzE2ZmFkNTE3L0lSQjM2MC5qcGciXSxbInAiLCJ0aHVtYiIsIjQwMHg0MDBcdTAwM2UiXV0?sha=ca78fb139f9974a1" width="500">
+</p>
+
 ---
