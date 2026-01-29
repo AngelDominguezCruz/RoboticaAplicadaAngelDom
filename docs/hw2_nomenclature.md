@@ -39,5 +39,5 @@
 ## 5) Third Excercise
 - **Explanation:** In this exercise, the task is to analyze the given image to obtain the transformation matrices between different reference frames. Specifically, the transformations from frame A to frame B and from frame A to frame C.
 
-![Excercises 3](recursos/imgs/h2transformnomenclature/e31.jpeg)
-![Excercises 3](recursos/imgs/h2transformnomenclature/e32.jpeg)
+![Excercises 3.1](recursos/imgs/h2transformnomenclature/e31.jpeg)
+![Excercises 3.2](recursos/imgs/h2transformnomenclature/e32.jpeg)
