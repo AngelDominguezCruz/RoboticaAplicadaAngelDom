@@ -5,7 +5,7 @@ nav:
   - Ejemplo: ejemplo.md
   - Git Bash / Git: gitcmds.md
   - Homework 1 - Robots by Morphology: examplesofrobots.md
-  - Activity 1 - Ros2 Nodes and Topics: activity01_ros2topics.md
+  - Activity 1 - Ros2 Nodes and Topics: activity01_ros2topics_nodes.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
