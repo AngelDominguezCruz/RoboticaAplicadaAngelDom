@@ -18,7 +18,7 @@
 - **General:** To develop the ability to solve problems involving rotation and transformation of vectors and coordinate systems by formulating the appropriate rotation and homogeneous transformation matrices, and understanding the relationship between different reference frames through these transformations.
 
 
-![Excercises](recursos/imgs/h2transformnomenclature/excercises.jpeg)
+![Excercises](recursos/imgs/h2transformnomenclature/excercises.png)
 
 ---
 
