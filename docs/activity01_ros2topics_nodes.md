@@ -225,6 +225,6 @@ if __name__=="__main__":
 - **General:** This code demonstrates the fundamental concepts of communication in ROS 2 using a publisher-subscriber model. The c3po_node subscribes to messages from the Robot_speaking topic and logs any incoming data, while also publishing its own messages every second to the c3po_speaking topic, with a counter that increments with each message. The diagram of thise excercise is this one:
 
 
-![Ros2 Graph](![Ros2 Graph](recursos/imgs/activity01/Ros2Graph.jpeg))
+![Ros2 Graph](recursos/imgs/activity01/Ros2Graph.jpeg)
 
 ---
