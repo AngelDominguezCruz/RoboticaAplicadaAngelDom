@@ -65,7 +65,7 @@
 
 ![Solution 4](recursos/imgs/fkmatrix/solve4.jpeg)
 ![Matrix 4](recursos/imgs/fkmatrix/matrix4.jpeg)
-![Result 4](recursos/imgs/fkmatrix/result_4.png)
+![Result 4](recursos/imgs/fkmatrix/result5.png)
 
 ---
 
@@ -77,6 +77,6 @@
 
 ![Solution 5](recursos/imgs/fkmatrix/solve5.jpeg)
 ![Matrix 5](recursos/imgs/fkmatrix/matrix5.jpeg)
-![Result 5](recursos/imgs/fkmatrix/result_5.png)
+![Result 5](recursos/imgs/fkmatrix/result5.png)
 
 ---
