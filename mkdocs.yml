@@ -7,6 +7,7 @@ nav:
   - Homework 1 - Robots by Morphology: examplesofrobots.md
   - Activity 1 - Ros2 Nodes and Topics: activity01_ros2topics_nodes.md
   - Homework 2 - Nomenclature: hw2_nomenclature.md
+  - Activity 2 - Forward Kinematics: fkmatrix.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
