@@ -115,7 +115,7 @@ if __name__=="__main__":
 
 ---
 
-## 3) First Code: Only Publisher
+## 4) Second Code: Publisher and Subscriber
 
 ```bash
 import rclpy
@@ -220,7 +220,7 @@ if __name__=="__main__":
 
 ---
 
-## 4) Results
+## 5) Results
 
 ![First Node](recursos/imgs/activity01/NodeEmmaIsGay.jpeg)
 ![Second Node](recursos/imgs/activity01/Nodec3po.jpeg)
@@ -228,7 +228,7 @@ if __name__=="__main__":
 
 ---
 
-## 5) Conclusions
+## 6) Conclusions
 
 - **General:** This code demonstrates the fundamental concepts of communication in ROS 2 using a publisher-subscriber model. The c3po_node subscribes to messages from the Robot_speaking topic and logs any incoming data, while also publishing its own messages every second to the c3po_speaking topic, with a counter that increments with each message. The diagram of thise excercise is this one:
 
