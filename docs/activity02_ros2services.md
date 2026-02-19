@@ -273,7 +273,7 @@ if __name__=="__main__":
 
 ![First Node](recursos/imgs/ros2services/EmmaIsGay1.jpeg)
 ![Second Node](recursos/imgs/ros2services/c3po1.jpeg)
-![Clien](recursos/imgs/ros2services/clientserv.jpeg)
+![Client](recursos/imgs/ros2services/clientserv.jpeg)
 ![Second Node Reset](recursos/imgs/ros2services/c3po2.jpeg)
 
 ---
