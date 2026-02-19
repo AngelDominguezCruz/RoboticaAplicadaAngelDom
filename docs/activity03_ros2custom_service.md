@@ -292,6 +292,7 @@ if __name__ == "__main__":
 
 ![First Node](recursos/imgs/ros2battery/led_panel.jpeg)
 ![Second Node](recursos/imgs/ros2battery/battery.jpeg)
+![Topic Listener](recursos/imgs/ros2battery/led_echo.jpg)
 
 ---
 
