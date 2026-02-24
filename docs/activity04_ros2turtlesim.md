@@ -52,7 +52,7 @@ After modifying CMakeLists.txt and package.xml, we compiled the package using co
 
 ## 4) Fisrt Code: Turtle Spawner Node
 
-```bash
+```py
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
@@ -66,7 +66,7 @@ from my_robot_interfaces.srv import CatchTurtle
 
 - **Libraries:** Imports standard ROS 2 libraries, Python math/random modules, our custom interfaces, and the official Turtlesim services (Spawn and Kill).
 
-```bash
+```py
 class myNode_function(Node):
     def __init__(self):
         super().__init__('turtle_spawner')
@@ -89,7 +89,7 @@ class myNode_function(Node):
 - **Initialization:** Initializes an empty list of alive turtles and a publisher. It introduces a ROS 2 Parameter (spawn_frequency) that allows us to change how fast turtles spawn directly from the terminal without changing the code. It also sets up clients to talk to Turtlesim and a Server (catch_turtle) to listen to our Controller.
 
 
-```bash
+```py
         def spawn_turtle(self):
         spawn_request = Spawn.Request() 
         spawn_request.x = random.uniform(0.0, 11.0) 
@@ -106,7 +106,7 @@ class myNode_function(Node):
 
 - **Spawning Logic:** Triggered by the timer, this function generates random coordinates and sends an asynchronous request to Turtlesim to spawn a new turtle. It uses a lambda function to pass the coordinates to the callback once the server responds.
 
-```bash
+```py
         def catch_turtle_callback(self, request, response):
         kill_request = Kill.Request()
         kill_request.name = request.name
@@ -124,7 +124,7 @@ class myNode_function(Node):
 
 - **Catch Logic:** When the Controller node catches a turtle, it calls this service. This function asks Turtlesim to Kill (remove) the turtle from the screen, removes it from our internal alive_turtles_ list, and updates the published array.
 
-```bash
+```py
 def main(args=None):
     rclpy.init(args=args)
     parameters_node=myNode_function()
@@ -135,7 +135,7 @@ def main(args=None):
 - **Main Execution:** The main function initializes the ROS2 communication (rclpy.init), creates an instance of the class, and uses rclpy.spin to keep the node running and listening for callbacks until the program is manually stopped. Finally, it shuts down the ROS 2 client library cleanly.
 
 - **Full Code:**
-```bash
+```py
 import rclpy
 from rclpy.node import Node
 import random
@@ -232,7 +232,7 @@ def main(args=None):
 
 ## 5) Second Code: Turtle Controller Node (PID)
 
-```bash
+```py
 import rclpy
 from rclpy.node import Node
 import random
@@ -251,7 +251,7 @@ from my_robot_interfaces.srv import CatchTurtle
 - **Libraries:** Just like the spawner, we import standard libraries (rclpy, Node, math) and our custom interfaces. The key additions here are Pose from turtlesim.msg (used to get our exact coordinates) and Twist from geometry_msgs.msg (the universal ROS 2 message for commanding linear and angular velocities to move the robot).
 
 
-```bash
+```py
 class myNode_function(Node):
     def __init__(self):
         super().__init__('turtle_controller')
@@ -286,7 +286,7 @@ class myNode_function(Node):
 
 - **Node Initialization:** The node is named "turtle_controller". We initialize self.pose = None to avoid crashing before the first GPS message arrives. We declare variables to store the PID controller memory: integrals (accumulated error) and previous errors, for both linear and angular movements. self.dt = 0.001 represents the time differential. We create two Subscribers (for the alive turtles list and our own pose), one Publisher for the Twist commands, and a Client for the CatchTurtle service. Finally, a fast timer (0.001s) is created to run the control loop.
 
-```bash
+```py
         def alive_turtles_callback(self, msg: TurtleArray):
         self.alive_turtles_ = msg.turtles
 
@@ -297,7 +297,7 @@ class myNode_function(Node):
 - **Subscriber Callbacks:** Every time the Spawner publishes the array of targets, alive_turtles_callback updates our internal list. Every time the simulator publishes the hunter's coordinates, pose_callback saves the data into self.pose.
 
 
-```bash
+```py
         def control_turtles(self):
         if self.pose is None or len(self.alive_turtles_) == 0:
             return 
@@ -327,7 +327,7 @@ class myNode_function(Node):
 
 - **Target Lock:** This part of the control loop ensures we have data. Then, it uses the Pythagorean theorem to calculate the distance to all alive turtles and selects the closest one. If the closest turtle is different from our current target, we will change the current target. To avoid erratic movements from old PID memory, it resets the integrals and derivatives to 0.0 and saves the new target's name.
 
-```bash
+```py
         if closest_distance < 0.5:
             msg = Twist()
             msg.linear.x = 0.0
@@ -342,7 +342,7 @@ class myNode_function(Node):
 
 - **Catch Condition:** If the distance to the target is less than 0.5 units, the robot considers it caught. It immediately publishes a Twist message with 0.0 velocities to stop the hunter. It then prepares a CatchTurtle request with the prey's name and sends it to the Spawner node asynchronously. The function returns early to stop the PID calculations for this cycle.
 
-```bash
+```py
         msg = Twist()
 
         target_angle = math.atan2(closest_turtle.y - self.pose.y, closest_turtle.x - self.pose.x)
@@ -380,7 +380,7 @@ class myNode_function(Node):
 - **PID Controller:** 
 - *Angular (Steering):* It uses atan2 to find the desired angle and calculates the error. It standardizes the error between -π and π to take the shortest path. It applies numerical integration (multiplying error by dt) and derivation (rate of change over dt). It applies the Gains (Kp, Ki, Kd) and assigns the result to the angular velocity (msg.angular.z).
 - *Linear (Accelerator):* The error is simply the distance. It calculates its integral and derivative (the braking effect before a crash). It applies its respective Gains and assigns the result to the linear velocity (msg.linear.x). Finally, it publishes the movement.
-```bash
+```py
 def main(args=None):
     rclpy.init(args=args)
     parameters_node=myNode_function()
@@ -394,7 +394,7 @@ if __name__ == '__main__':
 - **Main Execution:** The main function initializes ROS 2, creates the node object, and spins it to keep the 0.001s control loop timer active. This ensures the PID controller evaluates the math continuously until the user stops the program.
 
 - **Full Code:**
-```bash
+```py
 import rclpy
 from rclpy.node import Node
 import random
