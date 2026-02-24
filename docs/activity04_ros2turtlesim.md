@@ -528,16 +528,67 @@ def main(args=None):
 
 ---
 
-## 6) Results
+## 6) Bringup Package (Launch + Params)
+
+To run our entire ecosystem (the simulator, the spawner, and the controller) with a single command, we used an XML launch file and a CMake build type.
+
+We created a new package named "myrobot_bringup" and structured it with a "config" folder for our parameters and a "launch" folder for our XML launch file.
+
+- Inside "myrobot_bringup/config/rob_param.yaml", we defined the parameters we want into our nodes. In this case, we set the spawn frequency for our "turtle_spawner".
+
+```yaml
+turtle_spawner:
+  ros__parameters:
+    spawn_frequency: 1.0
+```
+- **Explanation:** The YAML file uses the exact name of the node ("turtle_spawner"), followed by the "ros__parameters" keyword. Underneath, we define our custom "spawn_frequency" variable and set it to 1.0.
+
+- Inside "myrobot_bringup/launch/app_launch.xml", we wrote an XML script to control the startup of all three nodes and load the YAML file.
+
+```xml
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim" />
+
+    <node pkg="turtle" exec="turtle_spawner" name="turtle_spawner">
+        <param from="$(find-pkg-share myrobot_bringup)/config/rob_param.yaml" />
+    </node>
+
+    <node pkg="turtle" exec="turtle_controller" name="turtle_controller" />
+</launch>
+```
+- **`<launch>`:** The root tag that defines this as a ROS 2 launch file.
+- **`<node>`:** This tag starts a specific node. We specify the package ("pkg"), the executable name ("exec"), and the node name ("name").
+- **`<param from="..." />`:** Inside the spawner node block, we use this tag to dynamically locate the "myrobot_bringup" package and inject the "rob_param.yaml" configuration into the node at runtime.
+
+- Because "myrobot_bringup" is a CMake package, we needed to instruct the compiler to install our "launch" and "config" folders into the ROS 2 share directory so they can be found during execution. We added this snippet to "CMakeLists.txt" right before "ament_package()":
+
+```cmake
+install(DIRECTORY
+  launch
+  config
+  DESTINATION share/${PROJECT_NAME}
+)
+```
+
+- After building the workspace ("colcon build"), the entire project—with the adjusted 3.0 spawn rate—can be booted up simultaneously using a single terminal command:
+
+```bash
+ros2 launch myrobot_bringup app_launch.xml
+```
+
+---
+
+## 7) Results
 
 ![Trutlesim Node](recursos/imgs/turtlesim/turtlesim_node.jpeg)
 ![Trutle Spawner Node](recursos/imgs/turtlesim/turtle_spawner.jpeg)
 ![Turtle Controller Node](recursos/imgs/turtlesim/turtle_controller.jpeg)
+![Bringip Package](recursos/imgs/turtlesim/launch_pkg.jpeg)
 ![Turtle Controller Node](recursos/imgs/turtlesim/turtlesim.gif)
 
 ---
 
-## 7) Conclusions
+## 8) Conclusions
 
 - **General:** We built a fully autonomous system, a very big challenge for our programming skills. We learned how to manage robot states dynamically and applied real-world Calculus to solve robotic problems through a PID Controller. The resulting movement is optimized, and independent of processor speed thanks to the proper use of the time differential (dt) in our mathematical integrations.
 
