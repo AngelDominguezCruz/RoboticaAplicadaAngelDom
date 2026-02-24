@@ -533,12 +533,7 @@ def main(args=None):
 ![Trutlesim Node](recursos/imgs/turtlesim/turtlesim_node.jpeg)
 ![Trutle Spawner Node](recursos/imgs/turtlesim/turtle_spawner.jpeg)
 ![Turtle Controller Node](recursos/imgs/turtlesim/turtle_controller.jpeg)
-<p align="center">
-  <video width="700" controls>
-    <source src="recursos/videos/turtlesim/turtlesim.mp4" type="video/mp4">
-    Tu navegador no soporta la reproducción de video.
-  </video>
-</p>
+![Turtle Controller Node](recursos/imgs/turtlesim/turtlesim.gif)
 
 ---
 
