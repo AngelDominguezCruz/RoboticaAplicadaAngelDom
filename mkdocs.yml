@@ -11,6 +11,7 @@ nav:
   - Activity 3 - Ros2 Services: activity02_ros2services.md
   - Activity 4 - Ros2 Custom Services: activity03_ros2custom_service.md
   - Activity 5 - Ros2 Turtlesim Catch Them All: activity04_ros2turtlesim.md
+  - Activity 6 - URDF Robot Simulations: activity05_ros2urdf.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
