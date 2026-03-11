@@ -23,21 +23,24 @@
 
 ## 3) 3-DOF Articulated Robot Excercise
 
-- **Explanation:** This exercise focuses on a 3-Degree-of-Freedom (DOF) articulated robotic arm. First, the forward kinematics transformation matrix was established. Then, a geometric approach was used to find the inverse kinematics equations for $\theta_1, \theta_2$, and $\theta_3$. Finally, the Jacobian matrix was computed by differentiating the position vector equations with respect to each joint variable ($q_1, q_2, q_3$).
+- **Explanation:** This exercise focuses on a 3-Degree-of-Freedom (DOF) articulated robotic arm. First, the forward kinematics transformation matrix was established. Then, a geometric approach was used to find the inverse kinematics equations for θ1, θ2, and θ3. Finally, the Jacobian matrix was computed by differentiating the position vector equations with respect to each joint variable (q1, q2, q3).
 
 ### Forward Kinematics Matrices
-Before jumping into the inverse kinematics, the position equations from the transformation matrix are needed. First, the individual transformation matrices for each link ($A_1, A_2, A_3$) were defined based on the Denavit-Hartenberg parameters:
+Before jumping into the inverse kinematics, the position equations from the transformation matrix are needed. First, the individual transformation matrices for each link (A1, A2, A3) were defined based on the Denavit-Hartenberg parameters:
 
-**Link 1 Transformation Matrix ($A_1$):**
+**Link 1 Transformation Matrix (A1$):**
+
 ![Matrix A1](recursos/imgs/ikmatrix/matrix_a1.png)
 
-**Link 2 Transformation Matrix ($A_2$):**
+**Link 2 Transformation Matrix (A2):**
+
 ![Matrix A2](recursos/imgs/ikmatrix/matrix_a2.png)
 
-**Link 3 Transformation Matrix ($A_3$):**
+**Link 3 Transformation Matrix (A3):**
+
 ![Matrix A3](recursos/imgs/ikmatrix/matrix_a3.png)
 
-By multiplying these individual matrices ($T_0^3 = A_1 \cdot A_2 \cdot A_3$), the complete forward kinematics transformation matrix is obtained:
+By multiplying these individual matrices (T = A1 · A2 · A3), the complete forward kinematics transformation matrix is obtained:
 
 ![FK Matrix](recursos/imgs/ikmatrix/fk_matrix.png)
 
@@ -46,7 +49,7 @@ Using geometric analysis (trigonometry and the law of cosines), the joint angles
 ![Inverse Kinematics Calculation](recursos/imgs/ikmatrix/solve_ik.png)
 
 ### Jacobian Matrix
-The analytical Jacobian matrix was obtained by calculating the partial derivatives of the X, Y, and Z position equations with respect to the joint angles $q_1, q_2$, and $q_3$:
+The analytical Jacobian matrix was obtained by calculating the partial derivatives of the X, Y, and Z position equations with respect to the joint angles q1, q2, and q3:
 ![Jacobian Matrix Calculation](recursos/imgs/ikmatrix/solve_jacobian.png)
 
 ---
